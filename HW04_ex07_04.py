@@ -21,17 +21,29 @@
 
 ################################################################################
 # Imports
-
+import math
 
 # Body
+def eval_loop():
+	while True:
+		user_input = raw_input("I is human calculator-- ")
+		try:
+			eval(user_input)
+		except:
+			print("Not a valid evaluation statement... Check yourself boyo")
+		else:
+			if eval(user_input) != "done":
+				print(eval(user_input))
+			else:
+				print("fine I'm done playing too then")
+				break
 
 
 
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
     
 
 if __name__ == '__main__':

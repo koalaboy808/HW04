@@ -21,6 +21,13 @@
 # Body
 
 
+def count(word, letter):
+	count = 0
+	for letter in word:
+	    if letter == 'a':
+	        count = count + 1
+	print count
+
 
 
 ################################################################################
@@ -28,7 +35,9 @@ def main():
 
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!") 
+    count("Koalaboy", "a")
+    count("Rasta Bob", "o")
+    count("Eeks", "z")
     
 
 if __name__ == '__main__':

@@ -13,7 +13,8 @@
 # Body
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
+    """The code only accesses the first index (ie 0) and exits before getting
+    to the rest of the items
     """
     for c in s:
         if c.islower():
@@ -21,8 +22,12 @@ def any_lowercase1(s):
         else:
             return False
 
+
+
+
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """The function checks to see if the character 'c' is lowercase... which it always is
+    except on string length 0 (which is None)
     """
     for c in s:
         if 'c'.islower():
@@ -31,14 +36,15 @@ def any_lowercase2(s):
             return 'False'
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """ variable flag only refers to the last index
     """
     for c in s:
         flag = c.islower()
     return flag
 
+
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
+    """ looks good
     """
     flag = False
     for c in s:
@@ -46,12 +52,13 @@ def any_lowercase4(s):
     return flag
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """ this proves if all characters are lower case
     """
     for c in s:
         if not c.islower():
             return False
     return True
+
 
 ################################################################################
 def main():
@@ -60,7 +67,11 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    print(any_lowercase1("Hello"))
+    print(any_lowercase2("HELLO"))
+    print(any_lowercase3("hellO"))
+    print(any_lowercase4(""))
+    print(any_lowercase5("Hello"))
     
 
 if __name__ == '__main__':
